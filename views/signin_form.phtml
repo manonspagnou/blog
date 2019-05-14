@@ -1,0 +1,28 @@
+<h3>Se connecter</h3>
+<?php if(isset($error)):?>
+	<p class="error">
+		<?= $error; ?>
+	</p>
+<?php endif;?>
+	<form action="index.php?p=signin" method="POST">
+		<nav>
+			<ul>
+				<li>
+					<label for="email" id="email">Email</label>
+					<br>
+					<input type="text" name="email" id="email"/>
+				</li>
+				<br>
+				<li>
+					<label for="password" id="password">Mot de passe</label>
+					<br>
+					<input type="text" name="password" id="password"/>
+				</li>
+				<li>
+					<br>
+					<input type="submit" id="submit" value="Connection"/>
+				</li>
+			</ul>
+		</nav>
+	</form>
+	<br>

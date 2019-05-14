@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>MON SUPER BLOG</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mon Super Blog</h1>
+    </header>
+
+    <br>
+
+    <main>
+
+        <div id="session">
+            <?php $userSession = new UserSession(); ?>
+            <?php if($userSession->isAuthentificated()): ?>
+                <p>Bienvenue <?= $userSession->getUserName(); ?> !</p>
+            <?php endif; ?>
+        </div>
+
+    	<?php include $page . '.phtml'; ?>
+
+        <a id="accueil" href="index.php">Accueil</a>
+        <a>/</a>
+        <a id="createdAccount" href="index.php?p=signin">Se connecter</a>
+        <a>/</a>
+        <a id="connection" href="index.php?p=signin">Créer un compte</a>
+        <a>/</a>
+        <a id="deconnection" href="signout.php">Déconnection</a>
+
+    </main>
+    <footer>
+        <p>Mentions légales</p>
+        <p>Blablabla bla blabla bla blablabla</p>
+    </footer>
+</body>
+</html>

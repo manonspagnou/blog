@@ -1,0 +1,39 @@
+<?php if($fb->hasMessages()): ?>
+    <ul>
+        <?php while($message=$fb->fetch()): ?>
+            <li><?=$message; ?></li>
+        <?php endwhile; ?>
+    </ul>
+<?php endif; ?>
+
+<nav>
+
+    <ul>
+        <?php foreach($posts as $post):?>
+            <li>
+                <article>
+                    <p><?=$post['Name'];?></p>
+                    <h2><?=$post['Title'];?></h2>
+                    <small><?=(new DateTime($post['CreatedAt']))->format('d/m/Y');?></small>
+                    <br>
+                    <br>
+                    <br>
+                    <div id='image'>
+                        <?php if (!empty($post['Image'])):?>
+                            <img src="Images/<?= $post['Image']; ?>"
+                            alt="Image de fleur pour l'article 1">
+                        <?php endif; ?>
+                    </div>
+                    <br>
+                    <br>
+                    <p><?=substr($post['Content'],0,150);?>[...]</p>
+                    <a id="suite" href="index.php?p=post&postId=<?php echo $post['Id']?>">Lire la suite</a>
+                    <br>
+                    <br>
+
+                    <hr>
+                </article>
+            </li>
+        <?php endforeach;?>
+    </ul>
+</nav>

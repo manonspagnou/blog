@@ -1,0 +1,72 @@
+        <h2><?= $post['Title']; ?></h2>
+
+        <small><?= $post['CreatedAt']; ?></small>
+
+        <br>
+        <br>
+        <br>
+
+        <?php if (!empty($post['Image'])) : ?>
+            <img src="Images/<?= $post['Image']; ?>" alt="Image de fleur pour l'article 1">
+        <?php endif; ?>
+        <br>
+        <br>
+        <p><?= $post['Content']; ?></p>
+        <br>
+
+        <nav>
+            <ul>
+                <li>
+                    <article>
+                        <a id="retour" href="index.php">Retour à l'accueil</a>
+                    </article>
+                </li>
+            </ul>
+        </nav>
+
+        <br>
+        <hr>
+        <h3>Commentaires</h3>
+
+        <form action="index.php?p=addComment&postId=<?= $post['Id']; ?>" method="POST">
+            <nav>
+                <ul>
+                    <li>
+                        <label for="nickname" id="nickname">Pseudo</label>
+                        <br>
+                        <input type="text" name="nickname" id="nickname">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="content" id="content">Commentaire</label>
+                        <br>
+                        <textarea name="content" id="content"></textarea>
+                    </li>
+                </ul>
+            </nav>
+            <input id="submit" type="submit" value="Envoyer">
+        </form>
+
+        <br>
+        <hr>
+        <br>
+
+        <nav>
+            <ul>
+                <?php foreach ($comments as $comment):?>
+                <li>
+                    <article id="com">s
+                        <a id="nomcom"> <?= $comment['Nickname']; ?></a> 
+                        <a id="datecom"> : <?= $comment['CreatedAt']; ?></a>
+                        <br>
+                        <a id="contenucom"> <?= $comment['Content']; ?></a>
+                    </article>
+                </li>
+                <br>
+                <?php endforeach; ?>            
+            </ul>
+            <a id="touscom" href="">Voir tous les commentaires</a>
+        </nav>
+ 
+        <br>
+        <br>

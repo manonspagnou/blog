@@ -1,0 +1,131 @@
+body {
+	width:1250px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;	
+	margin: 0 auto;
+	padding: 0;
+	font-family: "Caviar Dreams";
+}
+
+ul li {
+	list-style-type: none;
+}
+
+h1 {
+	font-family: "Tahu!";
+	font-size: 90px;
+	line-height: 0;
+}
+
+p {
+	text-align: justify;
+	width: 50%;
+	margin-left: 25%;
+}
+
+footer p {
+	text-align: center;
+}
+
+h2 {
+	font-size: 80px;
+	margin: 0;
+	font-family: "Tahu!"
+}
+
+h3 {
+	font-size: 30px;
+	color: ;
+}
+
+small {
+	font-size: 22px;
+	color: #8ECCB9;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	margin: 0;
+}
+
+header {
+	position: relative;
+	height: 300px;
+	top: 20px;
+	background-image:url("Decorations/banner3.jpg");
+}
+
+footer {
+	background-image: url("Decorations/banner5.jpg");
+	height: 300px;
+	margin: 0;
+}
+
+#nickname {
+	width: 300px;
+	height: 25px;
+	border: ;
+}
+
+#content {
+	width: 300px;
+	height: 100px;
+}
+
+#submit {
+	padding: 4px;
+	background-color: white;
+	border: 1px solid #8ECCB9;
+	color: #8ECCB9;
+}
+
+article p:first-child {
+	text-align: center;
+	font-size: 20px;
+}
+
+#suite {
+	font-weight: bold;
+}
+
+#nomcom {
+	font-size: 18px;
+	color: #8ECCB9;
+	font-weight: bold; 
+}
+
+#contenucom {
+	font-size: 18px;
+}
+
+#touscom, #masque {
+	color: #8ECCB9;
+	border: 1px solid #8ECCB9;
+	padding: 4px;
+}
+
+#datecom {
+	color: lightgrey;
+	font-size: 18px;
+}
+
+#com {
+	border: 1px solid lightgrey;
+	padding: 10px;
+	width: 50%;
+	margin-left: 300px;
+}
+
+hr {
+	color: #8ECCB9;
+	width: 50%;
+}
+
+main > #session > p {
+	font-size: 30px;
+	font-weight: bold;
+	color: #8ECCB9;
+	text-align: center;
+}
